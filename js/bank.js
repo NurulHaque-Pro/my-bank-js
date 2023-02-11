@@ -7,7 +7,10 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
     const getDepositAmount = depositAmount.value;
     const newDepositAmountNumber = parseFloat(getDepositAmount);
 
-
+    if(isNaN(newDepositAmountNumber) === true){
+        alert('Please input the amount');
+        return;
+    }
     // Display Field
     const defaultDeposit = document.getElementById('total-deposit');
     const defaultDepositValue = defaultDeposit.innerText;
